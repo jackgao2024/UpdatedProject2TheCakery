@@ -1,0 +1,1451 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  width: 100%;
+  background-color: rgb(251, 202, 235);
+  position: relative;
+}
+/*heeader///////////////////////////////////////////////////////////////////////////////*/
+.header {
+  display: flex;
+  width: 100%;
+  height: 340px;
+  /* background-color: rgb(132, 203, 229); */
+  background: linear-gradient(rgb(132, 203, 229), rgb(251, 202, 235));
+}
+.petalsSection {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.petals {
+  position: relative;
+  display: flex;
+}
+.petals span {
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 36deg)) translateZ(550px);
+}
+.petals span img {
+  position: relative;
+  width: 35px;
+  height: 30px;
+  margin: 0 5px;
+  animation: animatePetals 30s linear infinite;
+  animation-duration: calc(140s / var(--i));
+}
+@keyframes animatePetals {
+  0% {
+    transform: perspective(1000px) translateY(-20vh) translateX(50vh)
+      rotateY(30deg);
+  }
+  20% {
+    transform: perspective(1000px) translateY(-24vh) translateX(60vh)
+      rotateX(45deg);
+  }
+  40% {
+    transform: perspective(1000px) translateY(-38vh) translateX(70vh)
+      rotateY(60deg);
+  }
+  60% {
+    transform: perspective(1000px) translateY(-50vh) translateX(80vh)
+      rotateX(76deg);
+  }
+  80% {
+    transform: perspective(1000px) translateY(-65vh) translateX(90vh)
+      rotateY(120deg);
+  }
+
+  100% {
+    transform: perspective(1000px) translateY(-70vh) translateX(100vh)
+      rotateY(360deg);
+  }
+}
+
+.left {
+  width: 100%;
+  display: flex;
+  /* border: 1px solid green; */
+  margin: 50px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  width: 100%;
+  display: flex;
+  /* border: 1px solid green; */
+  margin: 50px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.right img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.left p {
+  font-size: 35px;
+  margin-bottom: 0;
+  font-family: info;
+  text-align: center;
+}
+.right p {
+  font-size: 35px;
+  margin-bottom: 0;
+  font-family: info;
+  text-align: center;
+}
+
+@font-face {
+  font-family: info;
+  src: url(../../fonts/Italianno-Regular.ttf);
+}
+.center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+#song {
+  position: absolute;
+  top: 40px;
+  left: 49.55%;
+}
+.center img {
+  margin-top: 10px;
+  width: 40%;
+}
+.theCakeryMainTitle {
+  font-size: 68px;
+  color: white;
+  margin-top: 10px;
+  font-family: theCakeryMainTitle;
+}
+@font-face {
+  font-family: theCakeryMainTitle;
+  src: url(../../fonts/Italiana-Regular.ttf);
+}
+.center h4 {
+  font-size: 35px;
+  color: white;
+  font-family: since2013;
+}
+@font-face {
+  font-family: since2013;
+  src: url(../../fonts/Karantina-Bold.ttf);
+}
+
+hr {
+  width: 80%;
+  display: flex;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: aqua;
+  margin-left: 150px;
+}
+
+/*contentContainer//////////////////////////////////////////////////////////////////*/
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgb(251, 202, 235);
+}
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+.hotEvents {
+  position: absolute;
+  font-size: 70px;
+  color: white;
+  /* left: 20%; */
+  top: 0%;
+  z-index: 1;
+  margin-bottom: 30px;
+  font-family: mainTitle;
+  background-image: linear-gradient(
+    to right,
+    rgb(5, 207, 252),
+    rgba(31, 226, 252, 0.8),
+    rgba(255, 152, 238, 0.878),
+    rgb(251, 202, 235)
+  );
+}
+
+@font-face {
+  font-family: hotEvent;
+  src: url(../../fonts/Julee-Regular.ttf);
+}
+#slider {
+  overflow: hidden;
+  width: 60%;
+  /* border: 2px solid red; */
+  height: 620px;
+  margin-top: 50px;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+#slider figure img {
+  float: left;
+  width: 20%;
+}
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+}
+
+/*nav///////////////////////////////////////////////////////////////////////////*/
+.nav {
+  /* border: 1px solid red; */
+  background-color: rgb(132, 203, 229);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  margin-top: 5px;
+}
+.nav .btn {
+  /* color: rgba(249, 224, 255, 0.7); */
+  border: 2px solid white;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-radius: 0;
+  font-family: nav;
+  letter-spacing: 3px;
+  font-size: 35px;
+  /* background: white; */
+  color: white;
+  /* color: rgb(251, 202, 235); */
+}
+
+@font-face {
+  font-family: nav;
+  src: url(../../fonts/Karantina-Light.ttf);
+}
+
+.nav .btn:hover {
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    /* rgb(5, 207, 252),
+    rgba(31, 226, 252, 0.8), */ rgb(227, 51, 198),
+    rgb(235, 184, 218)
+  );
+  background-clip: text;
+  border: 2px solid rgb(227, 51, 198);
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  font-size: 40px;
+}
+
+/*the owner container///////////////////////////////////////////////////*/
+.ownerContainer {
+  display: flex;
+  background-color: rgb(179, 226, 243);
+  border: 5px solid rgb(251, 202, 235);
+  width: 80%;
+  height: 300px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.ownerContainer .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 20%;
+}
+.ownerContainer .left img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.ownerContainer .left p {
+  font-family: owner;
+  color: rgb(0, 0, 0);
+  stroke: url(#pattern);
+
+  font-size: 40px;
+  text-align: center;
+}
+@font-face {
+  font-family: owner;
+  src: url(../../fonts/Karantina-Light.ttf);
+}
+
+.ownerContainer .right {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.ownerContainer .right p {
+  color: black;
+  font-size: 27px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/*FiveBigContentContainer*/
+.FiveBigContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  /* background-color: rgb(251, 202, 235); */
+  background: linear-gradient(
+    rgb(251, 202, 235),
+    rgba(251, 202, 235, 0.759),
+    rgba(132, 203, 229, 0.763),
+    rgb(132, 203, 229)
+  );
+}
+/*aboutUsContainer//////////////////////////////////////////////////////*/
+.aboutUsContainer {
+  width: 80%;
+  height: 600px;
+  /* margin-top: 40px;
+  margin-bottom: 40px; */
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.mentionsContainer {
+  width: 80%;
+  height: 600px;
+
+  margin-bottom: 40px;
+  position: relative;
+}
+.reviewContainer {
+  width: 80%;
+  height: 600px;
+
+  margin-bottom: 40px;
+  position: relative;
+}
+.aboutUsVideo iframe {
+  width: 100%;
+  height: 600px;
+}
+
+/*Gallery//////////////////////////////////////////////////*/
+.galleryContainer {
+  width: 80%;
+  height: 600px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(90, 227, 240), rgb(251, 202, 235));
+  overflow: hidden;
+  position: relative;
+}
+
+.galleryContainer .galleryMainTitle p {
+  font-family: mainTitle;
+  position: absolute;
+  top: 7%;
+  left: 42%;
+  font-size: 50px;
+  text-align: center;
+  /* background-color: rgb(251, 202, 235); */
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(5, 207, 252),
+    rgba(31, 226, 252, 0.8),
+    rgb(255, 152, 238),
+    rgb(251, 202, 235)
+  );
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: mainTitle;
+  src: url(../../fonts/Italiana-Regular.ttf);
+}
+
+.slider {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.slider span {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 36deg)) translateZ(550px);
+}
+
+.slider span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 2s;
+}
+
+.slider span:hover img {
+  transform: translateY(-50px) scale(1.15);
+}
+
+.galleryContainer .actionButton {
+  position: absolute;
+  top: 12%;
+  right: 0%;
+  font-size: 30px;
+  font-family: nav;
+  color: black;
+  background-color: rgb(90, 227, 240);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 120px;
+  height: fit-content;
+  border-radius: 0;
+  letter-spacing: 2px;
+  text-align: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.actionButton:hover {
+  font-size: 33px;
+  color: white;
+  background-color: rgb(251, 202, 235);
+  text-align: center;
+}
+
+/*Menu*/
+.menuContainer {
+  width: 80%;
+  height: 600px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: rgb(251, 202, 235); */
+  background: linear-gradient(to left, rgb(244, 212, 245), rgb(240, 179, 220));
+}
+.menuContainer .menuMainTitle p {
+  font-family: mainTitle;
+  position: absolute;
+  top: 7%;
+  left: 43%;
+  font-size: 50px;
+  text-align: center;
+  z-index: 1;
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(5, 207, 252),
+    rgba(31, 226, 252, 0.8),
+    rgb(255, 152, 238),
+    rgb(251, 202, 235)
+  );
+  cursor: pointer;
+}
+
+.menuContainer img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* top: 30%;
+  left: 20%; */
+}
+.menuContainer .actionButton {
+  position: absolute;
+  top: 12%;
+  right: 0%;
+  font-size: 30px;
+  font-family: nav;
+  color: black;
+  background-color: rgb(90, 227, 240);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 120px;
+  height: fit-content;
+  border-radius: 0;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+.actionButton:hover {
+  font-size: 33px;
+  color: white;
+  background-color: rgb(251, 202, 235);
+}
+.fresh {
+  color: white;
+
+  font-family: mainTitle;
+  position: absolute;
+  top: 38%;
+  left: 6%;
+  z-index: 1;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+/*Mentions//////////////////////////////////////////////////*/
+.mentionsContainer {
+  width: 80%;
+  height: 600px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: rgb(251, 202, 235); */
+  background: linear-gradient(to right, rgb(90, 227, 240), rgb(205, 228, 230));
+}
+.mentionsContainer .mentionsMainTitle p {
+  font-family: mainTitle;
+  position: absolute;
+  top: 7%;
+  left: 40%;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(5, 207, 252),
+    rgba(31, 226, 252, 0.8),
+    rgb(255, 152, 238),
+    rgb(251, 202, 235)
+  );
+  z-index: 1;
+  cursor: pointer;
+}
+
+.mentionsContainer img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* top: 30%;
+  left: 20%; */
+}
+.mentionsContainer .actionButton {
+  position: absolute;
+  top: 12%;
+  right: 0%;
+  font-size: 30px;
+  font-family: nav;
+  color: black;
+  background-color: rgb(90, 227, 240);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 120px;
+  height: fit-content;
+  border-radius: 0;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+.actionButton:hover {
+  font-size: 33px;
+  color: white;
+  background-color: rgb(251, 202, 235);
+  letter-spacing: 2px;
+  text-align: center;
+}
+.hookSentence {
+  /* color: rgb(90, 227, 240); */
+  color: white;
+
+  font-family: mainTitle;
+  position: absolute;
+  top: 88%;
+  left: 0%;
+  z-index: 1;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+@font-face {
+  font-family: hooksentence;
+  src: url(../../fonts/Karantina-Regular.ttf);
+}
+#ins {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 48%;
+  top: 83%;
+}
+
+/*review///////////////////////////////////////////////////////////////////////////////////*/
+.reviewContainer {
+  width: 80%;
+  height: 600px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: rgb(251, 202, 235); */
+  background: linear-gradient(to right, rgb(90, 227, 240), rgb(205, 228, 230));
+}
+.reviewContainer img {
+  width: 100%;
+  height: 100%;
+  rotate: 180deg;
+}
+.reviewContainer .reviewMainTitle p {
+  font-family: mainTitle;
+  position: absolute;
+  top: 7%;
+  left: 40%;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(5, 207, 252),
+    rgba(31, 226, 252, 0.8),
+    rgb(255, 152, 238),
+    rgb(251, 202, 235)
+  );
+  z-index: 1;
+  cursor: pointer;
+}
+.reviewContainer .actionButton {
+  position: absolute;
+  top: 12%;
+  right: 0%;
+  font-size: 30px;
+  font-family: nav;
+  color: black;
+  background-color: rgb(90, 227, 240);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 120px;
+  height: fit-content;
+  border-radius: 0;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+.actionButton:hover {
+  font-size: 33px;
+  color: white;
+  background-color: rgb(251, 202, 235);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.twoReviews {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.review1 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+}
+.review2 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+}
+.nameAndDate {
+  font-size: 30px;
+  font-family: OK;
+}
+.reviewContent {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.stars {
+  display: flex;
+}
+.stars img {
+  width: 2%;
+  rotate: 360deg;
+  padding-right: 2px;
+  padding-bottom: 10px;
+}
+.nameAndDate img {
+  width: 6%;
+  margin-right: 15px;
+}
+
+.footer {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(rgb(251, 202, 235), rgb(132, 203, 229));
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+.footer img {
+  width: 10%;
+}
+.footer .footerTitle {
+  font-size: 40px;
+  color: white;
+  margin-top: 10px;
+  font-family: footerTitle;
+}
+@font-face {
+  font-family: footerTitle;
+  src: url(../../fonts/Italiana-Regular.ttf);
+}
+.footer h4 {
+  font-size: 28px;
+  color: white;
+  font-family: since2013;
+}
+.socialMedia {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 55px;
+}
+.socialMedia img {
+  width: 40px;
+}
+.socialMedia button {
+  border: 0;
+  background: transparent;
+}
+
+#slack {
+  border-radius: 5px;
+}
+
+@keyframes animateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+
+#logoAnywhere1 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 43%;
+  left: 3%;
+  width: 100px;
+  rotate: 35deg;
+  z-index: 1;
+}
+#logoAnywhere2 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 88%;
+  left: 86%;
+  width: 150px;
+  rotate: 45deg;
+  z-index: 1;
+}
+#logoAnywhere3 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 81%;
+  left: 7%;
+  width: 100px;
+  rotate: -55deg;
+  z-index: 1;
+}
+#logoAnywhere4 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 63%;
+  left: 79%;
+  width: 120px;
+  rotate: 62deg;
+  z-index: 1;
+}
+#logoAnywhere5 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 9%;
+  left: 88%;
+  width: 133px;
+  rotate: -59deg;
+  z-index: 1;
+}
+#logoAnywhere6 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 71%;
+  left: 10%;
+  width: 120px;
+  rotate: 55deg;
+  z-index: 1;
+}
+#logoAnywhere7 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 74%;
+  left: 90%;
+  width: 133px;
+  rotate: -45deg;
+  z-index: 1;
+}
+#logoAnywhere8 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 17%;
+  left: 5%;
+  width: 150px;
+  rotate: 35deg;
+  z-index: 1;
+}
+#logoAnywhere9 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 51%;
+  left: 86%;
+  width: 100px;
+  rotate: -33deg;
+  z-index: 1;
+}
+#logoAnywhere10 {
+  animation: animateLogo 35s linear infinite;
+  position: absolute;
+  top: 24%;
+  left: 86%;
+  width: 93px;
+  rotate: -20deg;
+  z-index: 1;
+}
+
+.leftFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+
+  padding-left: 15%;
+}
+.leftFooter p {
+  font-style: info;
+  color: white;
+  font-size: 35;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.centerFooter {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.centerFooter button {
+  width: 60%;
+  background: transparent;
+  border: none;
+}
+.centerFooter button img {
+  width: 30%;
+}
+.rightFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding-right: 15%;
+}
+
+/*******************************************************************************************************************/
+/*    Gallery style    */
+/*******************************************************************************************************************/
+.eachGalleryTitle {
+  font-family: eachGalleryTitle;
+  color: white;
+  font-size: 65px;
+  font-weight: bold;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+@font-face {
+  font-family: eachGalleryTitle;
+  src: url(../../fonts/Julee-Regular.ttf);
+}
+/*******************************************************************************************************************/
+/*     Menu style    */
+/*******************************************************************************************************************/
+.cartlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartlogo img {
+  width: 35px;
+  height: 35px;
+}
+.amount {
+  margin-left: 10px;
+  padding-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: xx-large;
+}
+.row1,
+.row2 {
+  display: flex;
+}
+.item1,
+.item2,
+.item3 {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid rgb(251, 202, 235);
+  border-radius: 25px;
+}
+#menuID {
+  background-color: aqua;
+}
+
+.box1 button {
+  border: 2px solid rgb(251, 202, 235);
+  color: black;
+  padding: 5px;
+  border-radius: 50px;
+  width: 88px;
+  background-color: rgb(251, 202, 235);
+  font-family: menuButtons;
+  font-weight: bolder;
+}
+.box2 button {
+  border: 2px solid rgb(251, 202, 235);
+  color: black;
+  padding: 5px;
+  border-radius: 50px;
+  width: 88px;
+  background-color: rgb(251, 202, 235);
+  font-family: menuButtons;
+  font-weight: bolder;
+}
+.box3 button {
+  border: 2px solid rgb(251, 202, 235);
+  color: black;
+  padding: 5px;
+  border-radius: 50px;
+  width: 88px;
+  background-color: rgb(251, 202, 235);
+  font-family: menuButtons;
+  font-weight: bolder;
+}
+.box4 button {
+  border: 2px solid rgb(251, 202, 235);
+  color: black;
+  padding: 5px;
+  border-radius: 50px;
+  width: 88px;
+  background-color: rgb(251, 202, 235);
+  font-family: menuButtons;
+  font-weight: bolder;
+}
+.box5 button {
+  border: 2px solid rgb(251, 202, 235);
+  color: black;
+  padding: 5px;
+  border-radius: 50px;
+  width: 88px;
+  background-color: rgb(251, 202, 235);
+  font-family: menuButtons;
+  font-weight: bolder;
+}
+
+.row1 img {
+  width: 250px;
+  height: 250px;
+  border: 3px solid rgb(132, 203, 229);
+  border-radius: 25px 0 0 0;
+}
+.row2 img {
+  width: 250px;
+  height: 250px;
+  border: 3px solid rgb(132, 203, 229);
+  border-radius: 25px 0 0 0;
+}
+.item1 p {
+  color: black;
+  padding-top: 10px;
+  font-family: menuButtons;
+  background-color: rgb(132, 203, 229);
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.item2 p {
+  color: black;
+  padding-top: 10px;
+  font-family: menuButtons;
+  background-color: rgb(132, 203, 229);
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.item3 p {
+  color: black;
+  padding-top: 10px;
+  font-family: menuButtons;
+  background-color: rgb(132, 203, 229);
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+@font-face {
+  font-family: menuButtons;
+  src: url(../../fonts/Italiana-Regular.ttf);
+}
+
+.row1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+.row2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.contentbox h1 {
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-weight: bold;
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(132, 203, 229);
+  border-radius: 0 0 25px 0;
+}
+.MainTitle {
+  font-family: menuButtons;
+  font-size: 100px;
+  color: white;
+  padding-top: 20px;
+  text-align: center;
+}
+.button {
+  color: white;
+  padding-bottom: 10px;
+}
+.bigTitle {
+  color: rgb(132, 203, 229);
+  font-family: julee;
+  font-weight: bolder;
+  font-size: 55px;
+  text-align: center;
+  margin-top: 100px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+@font-face {
+  font-family: julee;
+  src: url(../../fonts/Julee-Regular.ttf);
+}
+.contentbox {
+  padding: 20px;
+}
+
+h1 {
+  font-family: julee;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 55px;
+}
+.tips {
+  color: white;
+  font-family: menuButtons;
+}
+.tips p {
+  color: black;
+  font-size: x-large;
+  font-family: tipFont;
+  letter-spacing: 3px;
+}
+@font-face {
+  font-family: tipFont;
+  src: url(../../fonts/Karantina-Light.ttf);
+}
+
+.box0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.box0 .top1Crown {
+  position: absolute;
+  rotate: -32deg;
+  width: 10%;
+  top: 12%;
+  left: 10%;
+  animation: animateCrown 1s linear infinite;
+}
+
+@keyframes animateCrown {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.box0 .top2Crown {
+  position: absolute;
+  rotate: -32deg;
+  width: 10%;
+  top: 12%;
+  left: 39%;
+  animation: animateCrown 1s linear infinite;
+}
+.box0 .top3Crown {
+  position: absolute;
+  rotate: -32deg;
+  width: 10%;
+  top: 14%;
+  left: 66%;
+  animation: animateCrown 1s linear infinite;
+}
+.box0 p {
+  font-size: 55px;
+  font-family: hotEvent;
+  color: rgb(132, 203, 229);
+  margin-top: 20px;
+}
+.top123Box {
+  width: 90%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid linear-gradient(rgb(132, 203, 229), rgb(251, 202, 235));
+  background: linear-gradient(rgb(132, 203, 229), rgb(251, 202, 235));
+  border-radius: 20px;
+}
+.top1Box {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(132, 203, 229);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.top1Box::before {
+  content: "";
+  position: absolute;
+  width: 690px;
+  height: 180px;
+  background-color: rgb(251, 202, 235);
+  box-shadow: 0 0 50px rgb(14, 199, 232);
+  animation: animate 5s linear infinite;
+  border-radius: 50%;
+}
+.top1Box::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+}
+
+.top2Box {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(132, 203, 229);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.top2Box::before {
+  content: "";
+  position: absolute;
+  width: 690px;
+  height: 180px;
+  background-color: rgb(251, 202, 235);
+  box-shadow: 0 0 50px rgb(14, 199, 232);
+  animation: animate 5s linear infinite;
+  border-radius: 50%;
+}
+.top2Box::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+}
+
+.top3Box {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(132, 203, 229);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.top3Box::before {
+  content: "";
+  position: absolute;
+  width: 690px;
+  height: 180px;
+  background-color: rgb(251, 202, 235);
+  box-shadow: 0 0 50px rgb(14, 199, 232);
+  animation: animate 5s linear infinite;
+  border-radius: 50%;
+}
+.top3Box::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+
+  border-radius: 50%;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.top1Box img {
+  width: 100%;
+  height: 350px;
+  border: 2px solid rgb(132, 203, 229);
+
+  padding: 10px;
+  z-index: 1;
+  border-radius: 50%;
+}
+.top2Box img {
+  width: 100%;
+  height: 350px;
+  border: 2px solid rgb(132, 203, 229);
+  z-index: 1;
+  padding: 10px;
+  border-radius: 50%;
+}
+.top3Box img {
+  width: 100%;
+  height: 350px;
+  border: 2px solid rgb(132, 203, 229);
+  z-index: 1;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/*******************************************************************************************************************/
+/*    mentions style    */
+/*******************************************************************************************************************/
+
+.MainTitleMentions {
+  font-family: menuButtons;
+  font-size: 100px;
+  color: white;
+  padding-top: 20px;
+  text-align: center;
+}
+.content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid rgb(255, 255, 255); */
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.mentionTitle {
+  color: rgb(90, 205, 228);
+  font-size: 45px;
+  font-family: blueTitle;
+}
+@font-face {
+  font-family: blueTitle;
+  src: url(../../fonts/Karantina-Regular.ttf);
+}
+.contentSentences {
+  padding-top: 20px;
+  color: white;
+  font-size: x-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.smallP {
+  color: white;
+  font-size: large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#mentionButtonID {
+  background-color: aqua;
+}
+
+.content1 img {
+  width: 400px;
+}
+.boxForVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 550px;
+
+  background-color: white;
+  background-image: url(../../images/bg.png);
+  border-radius: 30px;
+}
+
+/*******************************************************************************************************************/
+/*    mycart style     */
+/*******************************************************************************************************************/
+
+.myCartcontainer {
+  width: 100%;
+}
+h3 {
+  color: white;
+  margin-top: 100px;
+}
+.myCart {
+  margin-left: 200px;
+
+  width: 1100px;
+  height: 400px;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+h1 {
+  color: white;
+}
+
+#mycart {
+  background-color: aqua;
+  color: black;
+}
