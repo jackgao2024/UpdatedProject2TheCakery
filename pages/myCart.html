@@ -17,21 +17,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../pages/styles/style.css" />
+    <script src="mycart.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="logo">
-        <img id="logoAnywhere1" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere2" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere3" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere4" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere5" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere7" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere8" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere9" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere10" src="../images/theCakeryLogo.png" alt="" />
-        <img id="logoAnywhere6" src="../images/theCakeryLogo.png" alt="" />
-      </div>
+    <div class="contactContainer">
       <div class="header">
         <div class="left">
           <img src="../images/call.png" alt="" />
@@ -50,6 +39,7 @@
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
+          <img src="../images/music.png" alt="" id="musicIcon" />
           <img src="../images/theCakeryLogo.png" alt="" />
           <p class="theCakeryMainTitle">The Cakery</p>
           <h4>Since 2013</h4>
@@ -181,15 +171,138 @@
             class="btn"
             href="#"
             onclick="document.location='file:///C:/VanartsWebDesignProgram/Business%20concepts/secondWEB/UpdatedProject2TheCakery/pages/myCart.html'"
-            >My Cart</a
+            >Contact</a
           >
         </div>
       </div>
     </div>
-    <p class="MainTitle">My Cart</p>
-    <div class="myCart">
-      <h3>The cart is empty now, please add product via the main menu</h3>
+    <p class="MainTitle">Contact</p>
+    <div class="contactform">
+      <div class="firstFourRows">
+        <label for="" class="labelName">Name</label>
+        <input type="text" class="firstFourRowsInput" />
+        <label for="" class="labelName">Email</label>
+        <input type="text" class="firstFourRowsInput" />
+        <label for="" class="labelName">Phone</label>
+        <input type="text" class="firstFourRowsInput" />
+      </div>
+      <div class="selectOptions">
+        <div class="selectCP">
+          <select class="form-selectT">
+            <option selected>Muffines</option>
+            <option value="1">Chocolate</option>
+            <option value="2">Blueberry</option>
+            <option value="3">Cinnamon</option>
+            <option value="4">Banana</option>
+            <option value="5">Respberry</option>
+            <option value="6">Pumpkin</option>
+          </select>
+          <select class="form-selectB">
+            <option selected>amount</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="selectCP">
+          <select class="form-selectT" aria-label="Default select example">
+            <option selected>Cookies</option>
+            <option value="1">Chocolate</option>
+            <option value="2">Maple</option>
+            <option value="3">Cranberry</option>
+            <option value="4">Oatmeal</option>
+            <option value="5">Blueberry</option>
+            <option value="6">Pumpkin</option>
+          </select>
+          <select class="form-selectB" aria-label="Default select example">
+            <option selected>amount</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="selectCP">
+          <select class="form-selectT" aria-label="Default select example">
+            <option selected>Donuts</option>
+            <option value="1">Chocolate</option>
+            <option value="2">Strawberry</option>
+            <option value="3">Cruller</option>
+            <option value="4">Holesl</option>
+            <option value="5">Yeast</option>
+            <option value="6">Churros</option>
+          </select>
+          <select class="form-selectB" aria-label="Default select example">
+            <option selected>amount</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="selectCP">
+          <select class="form-selectT" aria-label="Default select example">
+            <option selected>Cakes</option>
+            <option value="1">Unique</option>
+            <option value="2">Angel</option>
+            <option value="3">Beauty</option>
+            <option value="4">Pets</option>
+            <option value="5">Wedding</option>
+            <option value="6">Funny</option>
+          </select>
+          <select class="form-selectB" aria-label="Default select example">
+            <option selected>amount</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="selectCP">
+          <select class="form-selectT" aria-label="Default select example">
+            <option selected>Accessories</option>
+            <option value="1">Logo</option>
+            <option value="2">Candle</option>
+            <option value="3">Balloon</option>
+            <option value="4">Crown</option>
+            <option value="5">Utensil</option>
+            <option value="6">Greetings</option>
+          </select>
+          <select class="form-selectB" aria-label="Default select example">
+            <option selected>amount</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+      <div><button class="addInComments">Add in Comments</button></div>
+
+      <div class="comment">
+        <label for="" class="labelName">Comments/Special Request</label>
+        <div class="commentInputBox">
+          <!-- <input type="text" class="commentsBox" /> -->
+          <!-- <input type="text" class="commentsBox" /> -->
+          <textarea class="commentsBox"></textarea>
+        </div>
+      </div>
     </div>
+    <div class="submitDIV">
+      <button class="submitButton">Submit</button>
+    </div>
+
     <div class="footer">
       <div class="leftFooter">
         <p>2842 Council Tree Ave #141, Fort Collins, CO 80525, United States</p>
